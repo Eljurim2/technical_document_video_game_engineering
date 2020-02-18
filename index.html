@@ -1,0 +1,392 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="css/technical.css">
+
+</head>
+
+<body>
+<nav id="navbar">
+<header> Understanding Game Development </header>
+  <ul>
+    <li><a href="#introduction_to_game_engineering" class="nav-link">Introduction to Game Engineering</a></li>
+    <li><a href="#what_is_a_video_game" class="nav-link">What is a Video Game</a></li>
+    <li><a href="#how_to_develop_a_good_game" class="nav-link">How to Develop a Good Game</a></li>
+    <li><a href="#game_engineering_team_management" class="nav-link">Game Engineering Team Management</a></li>
+    <li><a href="#architecture_of_a_game" class="nav-link">Architecture of a Game</a></li>
+    <li><a href="#graphics_engine" class="nav-link">Graphics Engine</a></li>
+    <li><a href="#sound/audio_engine" class="nav-link">Sound/Audio Engine</a></li>
+    <li><a href="#rendering_and_vision-input_engine" class="nav-link">Rendering and Vision-Input Engine</a></li>
+    <li><a href="#i/o_devices" class="nav-link">I/O Devices</a></li>
+    <li><a href="#dll_files_and_drivers/device_apis" class="nav-link">DLL Files and Drivers/Device APIs</a></li>
+    <li><a href="#list_of_all_game_genres" class="nav-link">List of All Game Genres</a></li>
+    <li><a href="#benefits_of_understanding_the_genre_of_game" class="nav-link">Benefits of Understanding the Genre of Game</a></li>
+    <li><a href="#adding_a_c#_script_to_unity_game_project" class="nav-link">Adding a C# Script to Unity Game Project</a></li>
+    <li><a href="#monobehaviour" class="nav-link">MonoBehaviour</a></li>
+    <li><a href="#start()_method" class="nav-link">Start() Method</a></li>
+    <li><a href="#update()_method" class="nav-link">Update() Method</a></li>
+
+
+</nav>
+
+<main id="main-doc">
+
+  <section class="main-section" id="introduction_to_game_engineering">
+    <header>
+      Introduction to Game Engineering
+    </header>
+
+    <p> This course requires a lot of patience and dedication and in this
+       tutorial you will be learning about a lot of interesting elements and
+        components which you have been wondering till now, about how games are
+         developed and engineered.</p>
+
+    <p> This is the tutorial which will give you a detailed overview of all
+       the internal architecture and components required for
+        Game development. </p>
+
+  </section>
+
+  <section class="main-section" id="what_is_a_video_game">
+    <header>
+      What is a Video Game?
+    </header>
+
+    <p> A video game can be defined as a game that runs on electronic devices
+       which involves humans interacting with a user interface(UI) for
+        generating visual responses on any video device like TV screen or
+         computer monitor. This electronic game when played by a user,
+          deals with a set of graphics, images or even audio to make the
+           game more interactive. </p>
+
+    <p> In simple words, video games are the digital entertainment
+       platform (which is a form of software) that humans "play" via a
+        computer, TV, smart phones, tablets or other gaming consoles.
+         The word video in video game was a traditional add-on which came
+          into existence when people used raster display device
+           (still used in some places), but after the 20th century,
+            this term was used for any type of display device which had the
+             capability to produce two- or three-dimensional images/videos.</p>
+
+  </section>
+
+<section class="main-section" id="how_to_develop_a_good_game">
+  <header> How to Develop a Good Game? </header>
+
+  <p> Becoming a good Game developer needs a lot of practice,
+     working on your ideas and a step by step approach.</p>
+  <p> First step, is to come up with a plan/blueprint of the game.
+     Games that doesn't follow proper development methodologies
+      suffer from issues like:</p>
+
+  <ul>
+    <li>Time taken for development is more.</li>
+    <li>Runs over budget.</li>
+    <li>Tends to be unreasonably more buggy.</li>
+  </ul>
+
+<p>
+So, an advice for the new game developers, before proceeding with designing
+and coding the game, mend a clear goal and figure out what your game needs.
+This phase of game development is called Requirement capture or Planning phase.
+ You can also use formalized languages like Unified Modeling Language (UML),
+(which we will discuss in details in our later chapter).
+In the "Requirement capture" or "planning phase", game developers can use case
+ diagrams, for quickly collecting the insights about the requirements
+  (e.g. how many designers, coders, testers required or developing
+   tools needed - Game Engine, Animation tools and other modeling tools
+    along with the game play or story line or objectives and levels of game)
+     to effectively manage and successfully complete your game development.</p>
+</section>
+
+<section class="main-section" id="game_engineering_team_management">
+  <header> Game Engineering Team Management </header>
+
+  <p>There are certain challenges which your developing team will have
+     to face (if you are not developing games alone).
+      Some of the issues which you or the team members may face are: </p>
+
+  <ul>
+    <li>Every day new features and tools are released online and your
+       team members will have to manage and upgrade their skills.</li>
+    <li>There may be internal dispute or personal issues which your
+       team manager should tactfully manage.</li>
+    <li>Good tester(s) should have to be hired to make your game bug-free
+       or else your game may not achieve the considerable popularity
+        or even meet your set target.</li>
+  </ul>
+
+<p> So for that the project manager should choose proper and skilled designers,
+   developers and testers to make the team work with coordination. </p>
+
+</section>
+
+<section class="main-section" id="architecture_of_a_game">
+  <header> Architecture of a Game</header>
+
+  <p>The architecture and structure of a game is similar to that of a software.
+   But it does have some additional components which makes it different
+    from a software. Every game has the following components:</p>
+  <ul>
+    <li>Graphics Engine</li>
+    <li>Sound/Audio Engine</li>
+    <li>Rendering & Vision-Input Engine</li>
+    <li>I/O Devices (like, Mouse, keyboard, speaker, monitor etc)</li>
+    <li>DLL files and Drivers/Device APIs</li>
+  </ul>
+
+  <p> All these above mentioned components combine together to make a game
+     playable to its full extent. Before discussing each of them,
+      let's just clear what an engine is. Engines are the
+       self-processing component(s) of a complete process that are driving
+        automatically behind the original process.</p>
+  </section>
+
+<section class="main-section" id="graphics_engine">
+  <header> Graphics Engine</header>
+  <p>A graphic engine is a software which in association with an application
+     program helps to draw graphics on your computer's display device.</p>
+
+  <p>The word engine in the computer field refers to a software which helps
+     performing some definite type of processing on programs,
+      such as text-to-speech engine, a database engine,
+      a layout engine and a graphics engine. Graphics engine helps to make
+       your game's graphics better by increasing the resolution and increasing
+        the number of pixels per unit area. This engine also makes your
+         game's scenes clear and run smooth.</p>
+    </section>
+
+<section class="main-section" id="sound/audio_engine">
+  <header>Sound/Audio Engine</header>
+
+  <p>The audio/sound engine is the component that consists of algorithms
+     for dealing with sound and in-built programs are written into it to
+      handle the sound effects embedded in the game. It has the capability
+       to perform calculations using the CPU, or on any dedicated
+        ASIC (Application Specific Integrated Circuit).
+       Abstraction APIs, such as Open-AL, SDL Audio, X-Audio 2, Web Audio, etc.
+        can be available within this engine.</p>
+  </section>
+
+<section class="main-section" id="rendering_and_vision-input_engine">
+  <header> Rendering and Vision-Input Engine</header>
+
+  <p>The rendering engine along with vision input system produces 3D animated
+     graphics, using different techniques, like rasterization and ray-tracing.
+      Being programmed and compiled to be executed on any CPU or
+       GPU straightforwardly, majority of rendering engines are developed upon
+        one or more rendering APIs like Direct3D and/or OpenGL that offers
+       a software abstraction layer for the Graphics Processing Unit (GPU).</p>
+  <p>Low-level libraries like DirectX or OpenGL are popularly incorporated
+     in games because they supply the hardware-independent access to different
+      computer hardware. These hardware devices can be input devices like mouse,
+   keyboard, and joystick; network devices like NIC and also to sound cards.</p>
+
+  </section>
+
+<section class="main-section" id="i/o_devices">
+  <header> I/O Devices</header>
+
+  <p>The devices which are used for inputting the data and the programs
+     in the computer are known as Input Devices. Input device can read data
+      and convert them to a form that a computer can use. Output Devices
+       can generate the finished product of machine processing into a form
+        usable/readable by humans. For a game, there should have to be a strong
+         interaction between the user and the game he/she is playing.
+       So for this the peripheral devices like mouse, keyboard, joysticks
+        and monitors play a major role to make the game interactive.</p>
+  </section>
+
+<section class="main-section" id="dll_files_and_drivers/device_apis">
+  <header> DLL Files and Drivers/Device APIs</header>
+
+  <p>A DLL (Dynamic Link Library) file, is a type of file which includes
+     instructions written in the form of programs which can be called or used
+      by other programs for performing certain tasks. In this manner,
+       different programs can share the abilities and characteristics
+        that have been programmed into a single file.</p>
+  <p>These system level files play a supporting role to build the architecture
+     of the game and help to make it perform well. You might have noticed that,
+      if you have installed a game which you want to play and you click
+       the executable(.exe file) to run the game, and just before starting
+        of the game, an error message pops up, with a message:</p>
+
+         <code>"particular_dll_name.dll is missing".</code>
+
+    <p>  These files are the supporting files that your system should
+       have to make the game work.</p>
+
+    <p>Again, a device API can be defined as
+       API (Application Programming Interface) which lets the developers
+        to create any application which can ultimately interact with hardware
+         devices plugged or installed with your system. A device API normally
+          provides end users to employ their plugged or associated hardware
+           for interacting with the system. Majority of the games (popular)
+            need these device drivers and APIs to make the game work with
+             all its components running successfully.</p>
+      <p>These five components make the architecture of a game both
+         internally as well as externally.</p>
+
+  </section>
+
+<section class="main-section" id="list_of_all_game_genres">
+  <header> List of all Game Genres</header>
+
+  <p>Here we have listed the main genres when it comes to categorising games.</p>
+
+  <ul>
+    <li> Action Games</li>
+    <li> Adventure Games</li>
+    <li> Role-Playing Games</li>
+    <li> Simulation Games</li>
+    <li> Strategy Games</li>
+    <li> Sport Games</li>
+    <li> Scientific and Educational Games</li>
+  </ul>
+
+  </section>
+
+<section class="main-section" id="benefits_of_understanding_the_genre_of_game">
+<header> Benfefits of Understanding the Genre of Game</header>
+
+<p>It is very crucial to understand the genre of the game before starting
+   with game development. If you are working for some client for Game
+    development project, try to understand the genre of the game that your
+     client has in mind, it will help you with following:</p>
+<ul>
+  <li>Design the theme of your Game. An adventure game may look good with
+     a forest backdrop, while a game being designed for school kids would
+      look good with colorful backdrop etc.</li>
+  <li>Game sounds also depends upon the genre of the game.</li>
+  <li>Use of blood and violence in the game is only adviced for Action games
+     for 18+ age group players.</li>
+</ul>
+
+</section>
+
+<section class="main-section" id="adding_a_c#_script_to_unity_game_project">
+  <header>Adding a C# Script to Unity Game Project</header>
+  <p>Of course, having objects that don't move in our game doesn't really
+     make our game interesting. So, let's understand how Unity C# Script
+      can be used to move the game objects, and from there on
+       we'll move to Rigidbodies.</p>
+
+    <p>First, of all, let's create a script. To do so,</p>
+    <code>right click in the Assets area, and go to Create → C# Script.</code>
+    <p>This will create a new file, with the default name NewBehaviourScript.
+       Rename the script to Movement, and press Enter. This will create a new
+        script with name Movement in the Assets section. Double click on it
+         to open it, and let's see what happens. Don't type anything
+          in this script for now.</p>
+
+    <code> public class Movement : MonoBehaviour {<br>
+       void Start(){
+
+       }
+      void Update() {
+
+       }
+    } </code>
+
+    <p>Since we're now moving into scripting, let me take a few moments to
+       mention that Unity refers to objects in a scene as gameObjects.
+        So, from this point forward, we will refer to the used objects
+         in the scene as gameObjects. Mr. Star will now be referred to
+          as a gameObject instead of an object.</p>
+    <p>You will notice that the script that we just created, comes with two
+       pre-defined methods, and that your script automatically inherits
+        from a base class called <em>MonoBehaviour</em>. Let's go through these
+         one by one and try to understand what they mean.</p>
+    </section>
+
+<section class="main-section" id="monobehaviour">
+  <header> MonoBehaviour</header>
+  <p>This is the base class that all scripts inherit basic properties
+     from, in Unity. This class defines and provides a lot of useful values,
+      methods and properties which you can use in your script, saving you a
+       lot of hassle. For example, MonoBehaviour contains definitions for
+        the position of a gameObject </p>
+  <code> gameObject.transform.position.x/y/z </code>
+  <p>meaning you can use these values directly instead of having to define them.</p>
+  <p>You generally shouldn't get rid of the inheritance declaration,
+   since most of the time you'll need the stuff this parent class provides,
+ to get your work done. MonoBehaviour also contains the definition for
+  the <em>Start()</em> and <em>Update()</em> methods, which we will explain up ahead.</p>
+
+  </section>
+
+<section class="main-section" id="start()_method">
+  <header> Start() Method</header>
+
+  <p>This method is run by the script once, at the very beginning of when
+     the gameObject is initialized and is enabled. This means that this method
+      is run as soon as an object becomes active. If an object is already
+     active when the scene is opened, the initialization and enabling process
+   are considered simultaneous. This method is very useful when you need
+    to declare components or set values. For example, you can use the Start
+   method to set the initial value of a gun's bullet count. You can also
+    use it to access other components attached to any gameObject,
+     as we'll see later on.</p>
+     <p>Check out the below code example, and do go through the comments to understand it.</p>
+
+     <code> //Let's consider this script to be attached to a gun
+            //in the game. the gun has an initial number of bullets
+            //Whenever it's spawned, and it has a Rigidbody2D for
+            //dealing with it's physics. Try to come back to this picture
+            //When you've understood Rigidbodies so you can get a better
+            //understanding of what's going on here.
+
+            public int bulletCount;
+            //Declaring the bulletCount variable.<br>
+            <br>
+            private Rigidbody2D gunBody;
+            //Declaring a Rigidbody2D instance.<br>
+            <br>
+            void Start(){<br>
+
+          bulletCount = 50;
+          //Whenever a gun is initialized, set it's starting
+          //bullet count to 50.<br>
+
+        gunBody = GetComponent Rigidbody2D();
+        //Give gunBody an actual Rigidbody2D by looking
+        //for a Rigidbody2D attached to the gun.
+      }
+      </code>
+      </section>
+
+<section class="main-section" id="update()_method">
+  <header> Update() Method</header>
+
+  <p>This method is called 60 times per second by Unity
+     (Or, 60 frames per second). It's where the main action of your code
+      usually happens. For example, detecting input, adding forces,
+       adding score, spawning enemies or bullets etc.</p>
+  <code>
+    //Update is called once per frame
+    void Update(){
+    <br>
+    if(input.GetMouseButtonDown(0))
+    //if the left mouse button is pressed...<br>
+    <br>
+    Instantiate(bullet);
+    //Create a bullet sprite. We'll be dealing with
+    //This later on.
+  }
+  </code>
+
+  <p> There are plenty of other pre-defined methods that MonoBehaviour
+     class gives us. You can actually find a list of these methods in
+      the Unity Documentation. They're for a variety of purposes,
+       but for the time being, and for simplicity's sake,
+       we will stick to just these two methods and the ones
+        that we define on our own.</p>
+
+  </section>
+
+</main>
+
+
+</body>
+
+</html>
